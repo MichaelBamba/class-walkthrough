@@ -19,6 +19,7 @@ const catController = require(`./routes/cat`);
 const dogController = require(`./routes/dog`);
 const personController = require('./routes/person')
 const greetController = require(`./routes/greet`)
+const ageController = require(`./routes/age`)
 
 
 app.use('/greet', greetController)
@@ -26,5 +27,6 @@ app.use('/person', personController)
 app.use('/', rootController);
 app.use('/cat', catController);
 app.use('/dog', dogController);
+app.use(`/age`, ageController)
 
 
