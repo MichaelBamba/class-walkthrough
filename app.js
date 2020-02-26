@@ -18,7 +18,10 @@ const rootController = require(`./routes/index`);
 const catController = require(`./routes/cat`);
 const dogController = require(`./routes/dog`);
 const personController = require('./routes/person')
+const greetController = require(`./routes/greet`)
 
+
+app.use('/greet', greetController)
 app.use('/person', personController)
 app.use('/', rootController);
 app.use('/cat', catController);
