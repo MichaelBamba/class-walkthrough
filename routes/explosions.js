@@ -6,10 +6,10 @@ const express = require('express'),
 router.get('/', (req, res) => {
     res.render('template', {
         locals: {
-            title: 'CAT PAGE!!!'
+            title: 'TNT SET!!!'
         },
         partials: {
-            partial: 'partial-cat'
+            partial: 'partial-explosions'
         }
     })
 });

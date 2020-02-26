@@ -25,7 +25,7 @@ const dogController = require(`./routes/dog`);
 const personController = require('./routes/person')
 const greetController = require(`./routes/greet`)
 const ageController = require(`./routes/age`)
-
+const explosionsController = require(`./routes/explosions`)
 
 app.use('/greet', greetController)
 app.use('/person', personController)
@@ -33,5 +33,6 @@ app.use('/', rootController);
 app.use('/cat', catController);
 app.use('/dog', dogController);
 app.use(`/age`, ageController)
+app.use(`/explosions`, explosionsController)
 
 
