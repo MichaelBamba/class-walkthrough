@@ -1,15 +1,21 @@
 const express = require('express'),
     router = express.Router();
 
+const data = [
+    { name: 'zubat', type: 'Flying' },
+    { name: 'pikachu', type: 'electric' }
+];
 
-
-router.get('/:name?', (req, res) => {
-    const { name } = req.params;
-    console.log(`url parameters are:`, req.params);
-    res
-        .status(200)
-        .send(`<h1>HELLO ${name}</h1>`)
-        .end();
+router.get('/', (req, res) => {
+    res.render('template', {
+        locals: {
+            title: 'POkemon',
+            arrayOfData: data
+        },
+        partials: {
+            partial: 'partial-person'
+        }
+    })
 });
 
 module.exports = router;
