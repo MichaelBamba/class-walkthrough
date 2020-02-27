@@ -19,6 +19,7 @@ app.listen(3333, () => {
 
 // });
 
+const ceosController = require(`./routes/ceos`)
 const rootController = require(`./routes/index`);
 const catController = require(`./routes/cat`);
 const dogController = require(`./routes/dog`);
@@ -34,5 +35,6 @@ app.use('/cat', catController);
 app.use('/dog', dogController);
 app.use(`/age`, ageController)
 app.use(`/explosions`, explosionsController)
+app.use(`/ceos`, ceosController)
 
 
